@@ -1,0 +1,160 @@
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: inherit;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #FAFAFA;
+    font-size: inherit;
+
+}
+
+
+.Sidebar {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-tab {
+    height: 40vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.second-tab {
+    height: 60vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    .main {
+        display: flex;
+        width: inherit;
+        justify-content: flex-start;
+        align-items: center;
+
+        .img {
+            img {
+                border-radius: 50%;
+                height: 90px;
+            }
+        }
+
+        .header {
+            h3 {
+                margin-left: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
+
+    }
+
+    .email {
+        padding: 10px 0 10px 5px;
+        font-size: 14px;
+    }
+
+    .info {
+        &__images {
+            display: flex;
+
+            &__container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 38px;
+                height: 38px;
+                margin: 4px;
+                border: 1px solid gray;
+                border-radius: 50%;
+
+            }
+        }
+
+        &__education {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+
+                li {
+                    margin-left: 15px;
+
+                    a {
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: #0D79D0;
+                    }
+                }
+
+                // li::marker {
+                //     color: lightgray;
+                //     font-size: 20px;
+                // }
+            }
+
+        }
+    }
+}
+
+.mock-content {
+    height: inherit;
+    width: inherit;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .author-side {
+        width: 100vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .author-side {
+        width: 100vw;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .author-side {
+        width: 50vw;
+    }
+}
