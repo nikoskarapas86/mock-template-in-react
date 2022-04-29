@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 14px;
+    height: 100vh;
 }
 
 *::before,
@@ -20,7 +21,7 @@ body {
 }
 
 
-.Sidebar {
+.main {
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -29,16 +30,12 @@ body {
 }
 
 .first-tab {
-    height: 40vh;
-    width: 95vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .second-tab {
-    height: 60vh;
-    width: 95vw;
     display: flex;
     flex-direction: column;
 }
@@ -53,9 +50,9 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 
-
     .main {
         display: flex;
+        flex-direction: row;
         width: inherit;
         justify-content: flex-start;
         align-items: center;
@@ -71,6 +68,10 @@ body {
             h3 {
                 margin-left: 15px;
                 font-size: 18px;
+            }
+
+            .info {
+                margin-left: 15px;
             }
         }
     }
@@ -112,7 +113,7 @@ body {
                 list-style-type: none;
 
                 li {
-                    margin-left: 15px;
+                    margin-left: 8px;
 
                     a {
                         font-size: 18px;
@@ -120,13 +121,7 @@ body {
                         color: #0D79D0;
                     }
                 }
-
-                // li::marker {
-                //     color: lightgray;
-                //     font-size: 20px;
-                // }
             }
-
         }
     }
 }
@@ -139,22 +134,82 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .author-side {
-        width: 100vw;
+    .main {
+        margin: 0;
+
+        .author-side {
+            width: 100vw;
+        }
+
+        .secondary-items {
+            width: 100vw;
+            margin: 10px 0 10px 0;
+        }
+
+        .second-tab {
+            width: 100vw;
+            height: 20vh;
+        }
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .author-side {
-        width: 100vw;
+
+    .main {
+        margin: 0;
+
+        .author-side {
+            width: 100vw;
+        }
+
+        .secondary-items {
+            width: 100vw;
+            margin: 10px 0 10px 0;
+        }
+
+        .second-tab {
+            width: 100vw;
+            height: 20vh;
+        }
     }
+
+
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .author-side {
-        width: 50vw;
+    .main {
+        margin: 0;
+
+        .first-tab {
+            height: 37vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 25px;
+
+            .author-side {
+                width: 50vw;
+            }
+
+            .secondary-items {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50vw;
+            }
+        }
+
+        .second-tab {
+            height: 57vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
     }
+
+
 }
